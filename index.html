@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        *{
+            text-transform: capitalize;
+            margin: 0%;
+            padding: 0%;
+
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-size: 22px;
+        }
+        .container{
+            display: block;
+            text-align: center;
+            
+        }
+        h1,#num,button{
+            margin: 20px;
+            
+        }
+
+        button{
+            background-color: green;
+            padding: 10px;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    
+    <h1>counter</h1>
+
+    <div id="num">0</div> 
+
+    <button id="++" onclick="plus()">increment</button> 
+    <button id="--" onclick="minus()">decrement</button>
+</div>
+
+    <script>
+        let value=0
+        let count =document.getElementById("num")
+
+    function plus(){
+            value++;
+            connect()
+        }
+        function minus(){
+            value--;
+            connect()
+        }
+
+        function connect(){
+            count.textContent=value;
+        }
+    </script>
+</body>
+</html>
